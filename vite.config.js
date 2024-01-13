@@ -13,6 +13,6 @@ export default defineConfig({
 		environment: "jsdom",
 		exclude: [...configDefaults.exclude, "**/e2e/**"],
 		globals: true,
-		setupFiles: ["@testing-library/jest-dom"],
+		setupFiles: ["./src/setupTests.js"],
 	},
 });

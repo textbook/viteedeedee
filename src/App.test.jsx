@@ -1,9 +1,19 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { http, HttpResponse } from "msw";
 
 import App from "./App";
+import { server } from "./setupTests.js";
 
-describe("app component", () => {
+describe("App component", () => {
+	beforeEach(() => {
+		server.use(
+			http.get("https://randomuser.me/api", () => {
+				return HttpResponse.json({ results: [{ name: { first: "" } }] });
+			}),
+		);
+	});
+
 	it("shows documentation links", () => {
 		render(<App />);
 

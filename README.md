@@ -29,7 +29,9 @@ The following tools are in use if you need further documentation:
 - [React] application
 - [Vite] dev server and bundling
 - [ESLint] linting rules
-- [Vitest] and [React Testing Library] low-level tests (unit/integration)
+- [Vitest] low-level tests (unit/integration)
+    - [React Testing Library] to render and interact with React
+    - [MSW] to allow mocking of network requests
 - [Playwright] high-level tests (end-to-end)
 
 ## Scripts
@@ -51,6 +53,7 @@ The following scripts are the entrypoints you'll commonly use:
 [github-create]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
 [github-publish]: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch
 [github-visit]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site
+[msw]: https://mswjs.io/
 [node.js]: https://nodejs.org/en
 [npm]: https://www.npmjs.com/
 [playwright]: https://playwright.dev/

@@ -16,7 +16,7 @@ module.exports = {
 			env: { browser: false, node: true },
 		},
 		{
-			files: ["src/**/*.test.js?(x)"],
+			files: ["src/setupTests.js", "src/**/*.test.js?(x)"],
 			env: { "vitest/env": true },
 			extends: [
 				"plugin:testing-library/react",
@@ -24,7 +24,9 @@ module.exports = {
 				"plugin:vitest/all",
 			],
 			rules: {
+				"vitest/no-hooks": "off",
 				"vitest/prefer-expect-assertions": "off",
+				"vitest/prefer-lowercase-title": "off",
 			},
 		},
 		{
