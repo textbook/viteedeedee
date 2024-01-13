@@ -1,0 +1,5 @@
+Built: 2024-01-13T17:23:23.731Z
+By: runner
+From: 65837bb Add buildinfo to output
+In: GitHub Actions build 4
+URL: https://github.com/textbook/viteedeedee/actions/runs/7513846978
