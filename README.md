@@ -51,7 +51,7 @@ The following scripts are the entrypoints you'll commonly use:
 [github-create]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
 [github-publish]: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch
 [github-visit]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site
-[node]: https://nodejs.org/en
+[node.js]: https://nodejs.org/en
 [npm]: https://www.npmjs.com/
 [playwright]: https://playwright.dev/
 [react]: https://react.dev/
