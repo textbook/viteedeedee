@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "dev": "vite",
+    "lint": "eslint . --ext cjs,js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,6 +15,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@codeyourfuture/eslint-config-standard": "^4.0.3",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react-swc": "^3.5.0",
