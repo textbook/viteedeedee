@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "postbuild": "buildinfo --output dist/buildinfo.txt",
     "dev": "vite",
     "e2e": "playwright test",
     "lint": "eslint . --ext cjs,js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -32,6 +33,7 @@
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
+    "@textbook/build-info": "^1.1.0",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
