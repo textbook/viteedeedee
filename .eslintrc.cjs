@@ -4,6 +4,7 @@ module.exports = {
 	env: { browser: true, es2020: true },
 	extends: [
 		"@codeyourfuture/standard",
+		"plugin:jsx-a11y/recommended",
 		"plugin:react/recommended",
 		"plugin:react/jsx-runtime",
 		"plugin:react-hooks/recommended",
