@@ -19,6 +19,7 @@ module.exports = {
 			env: { "vitest/env": true },
 			extends: [
 				"plugin:testing-library/react",
+				"plugin:vitest/recommended",
 				"plugin:vitest/all",
 			],
 			rules: {
