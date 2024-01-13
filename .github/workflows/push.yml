@@ -20,6 +20,8 @@ jobs:
       run: npm run lint
     - name: Run unit tests
       run: npm run test:cover
+      env:
+        FORCE_COLOR: true
     - name: Run end-to-end 
       id: e2e-test
       run: npm run e2e
