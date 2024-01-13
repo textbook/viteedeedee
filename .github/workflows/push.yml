@@ -1,0 +1,32 @@
+name: Automatic validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Node.js environment
+      uses: textbook/take-action@nodejs
+      with:
+        node-version: 20
+    - name: Install browsers
+      run: npx playwright install --with-deps
+    - name: Check code styling
+      run: npm run lint
+    - name: Run unit tests
+      run: npm run test:cover
+    - name: Run end-to-end 
+      id: e2e-test
+      run: npm run e2e
+    - name: Upload E2E artifacts
+      uses: actions/upload-artifact@v4
+      if: failure() && steps.e2e-test.outcome == 'failure'
+      with:
+        if-no-files-found: error
+        name: playwright-report
+        path: playwright-report/
