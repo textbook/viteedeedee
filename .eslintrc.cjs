@@ -9,7 +9,7 @@ module.exports = {
 		"plugin:react/jsx-runtime",
 		"plugin:react-hooks/recommended",
 	],
-	ignorePatterns: ["dist"],
+	ignorePatterns: ["coverage", "dist", "playwright-report"],
 	overrides: [
 		{
 			files: [".eslintrc.cjs", "*.config.js"],
