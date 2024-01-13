@@ -16,7 +16,7 @@ module.exports = {
 			env: { browser: false, node: true },
 		},
 		{
-			files: ["*.test.js", "*.test.jsx"],
+			files: ["src/**/*.test.js?(x)"],
 			env: { "vitest/env": true },
 			extends: [
 				"plugin:testing-library/react",
