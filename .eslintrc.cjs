@@ -11,7 +11,7 @@ module.exports = {
 	ignorePatterns: ["dist"],
 	overrides: [
 		{
-			files: [".eslintrc.cjs", "vite.config.js"],
+			files: [".eslintrc.cjs", "*.config.js"],
 			env: { browser: false, node: true },
 		},
 		{
@@ -24,6 +24,11 @@ module.exports = {
 			rules: {
 				"vitest/prefer-expect-assertions": "off",
 			},
+		},
+		{
+			files: ["e2e/**/*.spec.js"],
+			env: { node: true },
+			extends: ["plugin:playwright/recommended"],
 		},
 	],
 	parserOptions: { ecmaVersion: "latest", sourceType: "module" },
