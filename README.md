@@ -12,6 +12,16 @@ Requires [Node.js] v20 ("Iron" LTS, `^20.9`) and [NPM] v10 (bundled with Node).
 - Run `npx playwright install` to install browsers for end-to-end tests
 - Run `npm run ship` to ensure everything is working
 
+## Deployment
+
+The CI pipeline defined in `.github/workflows/push.yml` will automatically push the built site to the `gh-pages` branch for any successful build on the `main` branch. To serve this via GitHub Pages:
+
+- [Configure][github-publish] GitHub to deploy from `gh-pages` branch
+- [Set][vite-deploy] the `base` value in `vite.config.js` to either:
+    - `"/<repo_name>/"` for a _project site_; or
+    - `"/"` for a _user site_ (i.e. a repo named `<user_name>.github.io`).
+- Push your changes and wait for the various builds to run, then you should be able to [visit][github-visit] your site.
+
 ## Tools
 
 The following tools are in use if you need further documentation:
@@ -39,6 +49,8 @@ The following scripts are the entrypoints you'll commonly use:
 [eslint]: https://eslint.org/
 [github-clone]: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 [github-create]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+[github-publish]: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch
+[github-visit]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site
 [node]: https://nodejs.org/en
 [npm]: https://www.npmjs.com/
 [playwright]: https://playwright.dev/
@@ -46,5 +58,6 @@ The following scripts are the entrypoints you'll commonly use:
 [react testing library]: https://testing-library.com/docs/react-testing-library/intro/
 [tdd]: https://testdriven.io/test-driven-development/
 [vite]: https://vitejs.dev/
+[vite-deploy]: https://vitejs.dev/guide/static-deploy.html#github-pages
 [vitest]: https://vitest.dev/
 [vitest-coverage]: https://vitest.dev/guide/coverage.html
