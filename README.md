@@ -45,8 +45,8 @@ The following scripts are the entrypoints you'll commonly use:
 - `npm run ship`: run `lint`, then `test`, then `e2e`
 - `npm run start`: Start the app in production mode
 - `npm run test`: Run the low-level tests once
-    - `npm run lint:cover`: Run the tests and report [coverage][vitest-coverage]
-    - `npm run lint:watch`: Run the tests in watch mode
+    - `npm run test:cover`: Run the tests and report [coverage][vitest-coverage]
+    - `npm run test:watch`: Run the tests in watch mode
 
 [eslint]: https://eslint.org/
 [github-clone]: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
